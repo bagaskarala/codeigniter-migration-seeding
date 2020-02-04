@@ -282,5 +282,4 @@ define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
  * And away we go...
  */
 
-include_once './vendor/autoload.php';
 require_once BASEPATH . 'core/CodeIgniter.php';
