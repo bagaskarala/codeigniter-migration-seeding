@@ -2,7 +2,7 @@
 
 require APPPATH . 'database/Seeder.php';
 
-class Tools extends CI_Controller
+class Tools extends MY_Controller
 {
 
     public function __construct()
