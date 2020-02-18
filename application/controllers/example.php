@@ -47,7 +47,7 @@ class Example extends CI_Controller
             //$this->aauth->list_groups()
             //$this->aauth->list_users()
             // $this->aauth->is_group_allowed('add_draft', 'Public')
-            $this->aauth->get_errors_array()
+            // $this->aauth->get_errors_array()
             //$this->aauth->is_admin()
             //$this->aauth->create_perm1("deneme",'defff')
             //$this->aauth->update_perm(3,'dess','asd')
@@ -60,7 +60,7 @@ class Example extends CI_Controller
             //$this->aauth->remind_password('seass@asds.com')
             //$this->aauth->reset_password(11,'0ghUM3oIC95p7uMa')
             //$this->aauth->is_allowed(1)
-            // $this->aauth->control('layout_draft')
+            $this->aauth->control('layout_draft')
             //$this->aauth->send_pm(1,2,'asd')
             //$this->session->flashdata('d')
             //$this->aauth->add_member(1,1)
@@ -107,7 +107,7 @@ class Example extends CI_Controller
 
     public function login_fast()
     {
-        $this->aauth->login_fast(3);
+        $this->aauth->login_fast(2);
     }
 
     public function is_loggedin()
@@ -267,7 +267,7 @@ class Example extends CI_Controller
 
     public function create_group()
     {
-        $a = $this->aauth->create_group("layouter");
+        $a = $this->aauth->create_group("mantap", "deskripsi");
         print_r($a);
         $this->aauth->print_errors();
     }
@@ -287,7 +287,8 @@ class Example extends CI_Controller
     public function add_member()
     {
 
-        $a = $this->aauth->add_member(4, "Admin");
+        $a = $this->aauth->add_member(1, "Admin");
+        echo $a;
     }
 
     public function remove_member()
@@ -449,7 +450,7 @@ class Example extends CI_Controller
     public function login()
     {
 
-        if ($this->aauth->login('editor@editor.com', '12345', true)) {
+        if ($this->aauth->login('admin@mail.com', 'admin', true)) {
             echo 'OK. You are logged in';
         }
         $this->aauth->print_errors();
