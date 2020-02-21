@@ -11,10 +11,3 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |    https://codeigniter.com/user_guide/general/hooks.html
 |
  */
-
-# Load phpdotenv
-$hook['pre_system'] = function () {
-    $dotenv = Dotenv\Dotenv::createImmutable(APPPATH);
-    $dotenv->load();
-    $dotenv->required(['DB_USERNAME', 'DB_PASSWORD', 'DB_DATABASE']);
-};
