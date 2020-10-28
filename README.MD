@@ -1,4 +1,4 @@
-# Codeigniter Migration Seed Boilerplate
+# Codeigniter 3 Migration Seed Boilerplate
 
 Ready to use laravel-like codeigniter.
 
